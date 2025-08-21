@@ -5,11 +5,14 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const path = require('path')
-const escpos = require('escpos')
-escpos.USB = require('escpos-usb')
+const escpos = require('escpos');
+const SerialPort = require('serialport');
+escpos.SerialPort = SerialPort;
 
-const device = new escpos.USB();
+const device = new escpos.SerialPort('/dev/usb/lp0', {
+  baudRate: 9600
+});
+
 const options = { encoding: "GB18030" }
 const printer = new escpos.Printer(device, options)
 

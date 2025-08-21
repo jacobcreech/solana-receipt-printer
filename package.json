@@ -11,8 +11,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "escpos": "^3.0.0-alpha.6",
-    "escpos-usb": "^3.0.0-alpha.4",
-    "express": "^5.1.0"
+    "escpos": "^2.4.11",
+    "express": "^5.1.0",
+    "serialport": "^9.2.8"
   }
 }
