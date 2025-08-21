@@ -9,7 +9,7 @@ const escpos = require('escpos');
 const SerialPort = require('serialport');
 escpos.SerialPort = SerialPort;
 
-const device = new escpos.SerialPort('/dev/usb/lp0', {
+const device = new escpos.SerialPort('/dev/ttyUSB0', {
   baudRate: 9600
 });
 
